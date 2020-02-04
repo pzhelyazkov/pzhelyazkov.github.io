@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TOURS4FUN - Абониране</title>
+	<link href="css/style-index.css" rel="stylesheet" type = "text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+	<div class="subscribe">
+		<form  form class="form" >
+			<h1 class="form-title">Абонирайте се за нас!</h1>
+
+			<h2 class="form-subtitle">Включете се в приключението!</h2>
+
+			<input type="text" name="username" placeholder="Име и фамилия" class="form-input" />
+			<input type="email" name="email" placeholder="Имейл адрес" class="form-input" />
+			
+
+			<div class="form-actions">
+				<button class="form-button" onclick="ValidateEmail()">Абониране</button>
+			</div>
+
+		</form>
+
+	</div>
+
+<script>
+/*used regular expressions */
+
+	 function ValidateEmail(mail) 
+	 {
+	 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+	 	{
+	 		return true;
+	 	}
+	 		alert("Please enter an e-mail address.")
+	 		return false;
+	 }
+
+</script>
+	
+</body>
+
+</html>

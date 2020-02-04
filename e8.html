@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Ком-Емине</title>
+	<link href="css/style-index.css" rel="stylesheet" type = "text/css">
+	
+	<script type="text/javascript">
+
+		window.addEventListener('scroll', function() { 
+			var myNav = document.querySelector('.header-nav');
+			var myButtons = document.querySelectorAll('.header-nav button');
+			if (document.documentElement.scrollTop > 0) 
+			{
+			myNav.classList.add("scrolled");
+			myButtons.classList.add("scrolled");
+			} 
+			if(document.documentElement.scrollTop==0)
+			{
+			myNav.classList.remove("scrolled");
+			myButtons.classList.remove("scrolled");
+			}
+		});
+			
+		function myFunction()
+		{
+		  var dots = document.getElementById("dots");
+		  var moreText = document.getElementById("more");
+		  var btnText = document.getElementById("myBtn");
+
+		  if (dots.style.display === "none") {
+		    dots.style.display = "inline";
+		    btnText.innerHTML = "Read more"; 
+		    moreText.style.display = "none";
+		  } else {
+		    dots.style.display = "none";
+		    btnText.innerHTML = "Read less"; 
+		    moreText.style.display = "inline";
+		  }
+		}
+	</script>
+</head>
+
+<body>
+	
+	<header>
+		<div class="header-nav">
+			
+			<h1  id="page-header-logo"><a href="index.html">TOURS<span id="span4">4</span>FUN</a></h1>
+
+			<div id="open-nav" onclick="openNavigation()">≡</div>
+			<nav id="all-buttons" class="header-buttons ">
+				<button class="header-menu-btn" onclick="window.location.href='equipment.html'">Екипировка</button>
+				<div id="btn-dropdown" class="header-menu-btn">
+					<button id="all-tours-btn" href ="#">Всички преходи</button>
+					<div id="dropdown-content">
+						<a class="dropdown-cnt-btn" href="e3.html">Маршрут E3</a>
+    					<a class="dropdown-cnt-btn" href="e4.html">Маршрут E4</a>
+    					<a class="dropdown-cnt-btn" href="e8.html">Маршрут E8</a>
+					</div>
+				</div>
+				<button class="header-menu-btn" onclick="window.location.href='blog.html'">Блог</button>
+				<button class="header-menu-btn" onclick="window.location.href='contact.html'">Контакти</button>
+				<button class="header-menu-btn" id="button-search" href ="#">Търсене</button>
+			</nav>
+		</div>
+	</header>
+
+	
+  	<div class="container">
+  	 		<img class="img-tours" src="image/mezek.jpg" alt="image">
+ 	 		<div class="center">E-8 <br> "Рила - Родопи"</div>
+   	</div>
+	   <div id="search">
+		<h1 id="search-text" class="">Резултати от търсенето:</h1>
+		<div id="results"></div>
+		<button id="button-exit">Изход</button>
+	</div>
+	<div id="semitransp-bckgr"></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Ком-Емине</title>
+	<link href="css/style-index.css" rel="stylesheet" type = "text/css">
+	
+	<script type="text/javascript">
+
+		window.addEventListener('scroll', function() { 
+			var myNav = document.querySelector('.header-nav');
+			var myButtons = document.querySelectorAll('.header-nav button');
+			if (document.documentElement.scrollTop > 0) 
+			{
+			myNav.classList.add("scrolled");
+			myButtons.classList.add("scrolled");
+			} 
+			if(document.documentElement.scrollTop==0)
+			{
+			myNav.classList.remove("scrolled");
+			myButtons.classList.remove("scrolled");
+			}
+		});
+			
+		function myFunction()
+		{
+		  var dots = document.getElementById("dots");
+		  var moreText = document.getElementById("more");
+		  var btnText = document.getElementById("myBtn");
+
+		  if (dots.style.display === "none") {
+		    dots.style.display = "inline";
+		    btnText.innerHTML = "Read more"; 
+		    moreText.style.display = "none";
+		  } else {
+		    dots.style.display = "none";
+		    btnText.innerHTML = "Read less"; 
+		    moreText.style.display = "inline";
+		  }
+		}
+	</script>
+</head>
+
+<body>
+	
+	<header>
+		<div class="header-nav">
+			
+			<h1  id="page-header-logo"><a href="index.html">TOURS<span id="span4">4</span>FUN</a></h1>
+
+			<div id="open-nav" onclick="openNavigation()">≡</div>
+			<nav id="all-buttons" class="header-buttons ">
+				<button class="header-menu-btn" onclick="window.location.href='equipment.html'">Екипировка</button>
+				<div id="btn-dropdown" class="header-menu-btn">
+					<button id="all-tours-btn" href ="#">Всички преходи</button>
+					<div id="dropdown-content">
+						<a class="dropdown-cnt-btn" href="e3.html">Маршрут E3</a>
+    					<a class="dropdown-cnt-btn" href="e4.html">Маршрут E4</a>
+    					<a class="dropdown-cnt-btn" href="e8.html">Маршрут E8</a>
+					</div>
+				</div>
+				<button class="header-menu-btn" onclick="window.location.href='blog.html'">Блог</button>
+				<button class="header-menu-btn" onclick="window.location.href='contact.html'">Контакти</button>
+				<button class="header-menu-btn" id="button-search" href ="#">Търсене</button>
+			</nav>
+		</div>
+	</header>
+
+	<section>
+		 <div class="container">
+  	 		<img class="img-tours" src="image/nos-emine.jpg" alt="image">
+ 	 		<div class="center"> E-3 <br> "Ком - Емине"</div>
+    	</div>
+    </section>
+
+	<section>
+    		<p id="day-title">
+    			 Примерен график за пешеходно преминаване
+    		</p>
+    </section> 
+
+	<section>
+		<div class="day">
+	    	<p> 
+	    			Ден 1 > <b> връх Ком </b> – хижа Ком - хижа Петрохан <br>
+				    Ден 2 >	Хижа Петрохан – хижа Пробойница	<br> 
+				<span id="dots">...</span>
+				<span id="more">
+					Ден 3 > Хижа Пробойница – хижа Тръстена <br>
+					Ден 4 > Хижа Тръстена – хижа Лескова <br>
+					Ден 5 > Хижа Лескова – проход Витиня <br>
+					Ден 6 > Проход Витиня – хижа Чавдар <br>
+					Ден 7 > Хижа Чавдар – хижа Момина поляна <br>
+	 				Ден 8 > Хижа Момина поляна – хижа Ехо <br>
+	 				Ден 9 > Хижа Ехо – хижа Добрила <br>
+	 				Ден 10 > Хижа Добрила – заслон Ботев (аплийски траверс) <br>
+	 				Ден 11 > Заслон Ботев – хижа Мазалат <br>
+	 				Ден 12 > Хижа Мазалат – хижа Бузлуджа <br>
+	 				Ден 13 > Хижа Бузлуджа – ски база Грамадлива <br>
+	 				Ден 14 > Хижа Грамадлива – хижа Чумерна <br>
+	 				Ден 15 > Хижа Чумерна – заслон Вратник <br>
+	 				Ден 16 > Заслон Вратник – град Котел <br>
+	 				Ден 17 > Град Котел – Върбишки проход <br>
+	 				Ден 18 > Хижа Върбишки проход – заслона на Хазим Горския <br>
+	 				Ден 19 > Заслона на Хазим Горския – хижа Топчийско <br>
+	  				Ден 20 > Хижа Топчийско – село Козичино <br>
+	 				Ден 21 > Село Козичино – <b> нос Емине </b> <br>
+	    		</span>
+	    	</p>
+				<button onclick="myFunction()" id="myBtn">Read more</button>	
+		</div>
+	</section>
+	<div id="search">
+		<h1 id="search-text" class="">Резултати от търсенето:</h1>
+		<div id="results"></div>
+		<button id="button-exit">Изход</button>
+	</div>
+	<div id="semitransp-bckgr"></div>
+
+</body>
+</html>
